@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Config>
+	<!-- 数据库服务器配置信息 -->
+	<DBJDBCDriver>com.microsoft.sqlserver.jdbc.SQLServerDriver</DBJDBCDriver> <!-- 数据库驱动 -->
+	<DBServer>127.0.0.1</DBServer> <!-- 数据库服务器名或数据库服务IP地址 -->
+	<DBPort>1433</DBPort> <!-- 数据库服务器端口号 --> 
+    <DBName>fenye</DBName> <!-- 数据库名 -->
+    <DBUser>茉莉</DBUser> <!-- 访问数据库用户名 --> 
+    <DBPassword>wang513901</DBPassword> <!-- 访问数据密码 -->
+  	
+  	<!-- 日志配置信息 -->
+    <IsLog>true</IsLog> <!-- 是否记录日志 --> 
+        
+    <!-- 分页显示信息 -->
+    <PageSize>5</PageSize> <!-- 分页显示时,每页显示的记录数 -->
+
+    <!-- 日期格式 -->
+    <DateFormat>yyyy-MM-dd</DateFormat> <!-- 日期格式,例如:2001-01-01 -->
+    <DateTimeFormat>yyyy-MM-dd HH:mm:ss</DateTimeFormat> <!-- 日期格式,例如:2001-01-01 20:01:01 -->
+</Config>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <!--  服务器重启时自动执行 -->
+  
+<servlet>
+	<servlet-name>InitServlet</servlet-name>
+    <servlet-class>com.dingcheng365.common.InitServlet</servlet-class>
+	<init-param>  		
+		<param-name>ConfigURI</param-name>	
+		<param-value>WEB-INF/Config.xml</param-value>
+	</init-param>	
+	<load-on-startup>1</load-on-startup>
+</servlet>
+  
+  
+  <servlet>
+    <servlet-name>ClassAdd.do</servlet-name>
+    <servlet-class>com.dingcheng365.servlet.ClassAdd</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>ClassDelete.do</servlet-name>
+    <servlet-class>com.dingcheng365.servlet.ClassDelete</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ClassEdit.do</servlet-name>
+    <servlet-class>com.dingcheng365.servlet.ClassEdit</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>ClassAdd.do</servlet-name>
+    <url-pattern>/Servlet/ClassAdd.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ClassDelete.do</servlet-name>
+    <url-pattern>/Servlet/ClassDelete.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ClassEdit.do</servlet-name>
+    <url-pattern>/Servlet/ClassEdit.do</url-pattern>
+  </servlet-mapping>
+    
+  <welcome-file-list>
+    <welcome-file>Index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
